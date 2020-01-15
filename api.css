@@ -1,0 +1,242 @@
+.smmex-widget{
+
+}
+.smmex-widget img {
+	width: 42px;
+	height: 42px;
+}
+.smmex-widget.view-absolute {
+    right: 10px;
+    border: none;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 10px;
+    z-index: 9001;
+}
+.smmex-widget .widget-link {
+	margin-left: 5px;
+}
+.smmex-widget.view-absolute .widget-link {
+	margin-top: 10px;
+	margin-left: 0px;
+    display: block !important;
+}
+
+/* TOGGLE START */
+.smmex-widget .smmex-widget-toggle-wrapper {
+	margin-top: 10px;
+}
+.smmex-widget .smmex-widget-toggle-wrapper button.smmex-widget-toggle {
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	background: #00aeef;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	cursor: pointer;
+	outline: none !important;
+}
+.smmex-widget .smmex-widget-toggle-wrapper button.smmex-widget-toggle.rotate img {
+	-moz-animation-name: rotate-btn;
+    -moz-animation-duration: 0.35s;
+    -webkit-animation-name: rotate-btn;
+    -webkit-animation-duration: 0.35s;
+    animation-name: rotate-btn;
+    animation-duration: 0.35s;
+
+    -moz-animation-timing-function: ease;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0s;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+.smmex-widget .smmex-widget-toggle-wrapper button.smmex-widget-toggle.rotate-reverse img {
+	-moz-animation-name: rotate-reverse-btn;
+    -moz-animation-duration: 0.35s;
+    -webkit-animation-name: rotate-reverse-btn;
+    -webkit-animation-duration: 0.35s;
+    animation-name: rotate-reverse-btn;
+    animation-duration: 0.35s;
+
+    -moz-animation-timing-function: ease;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0s;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0s;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+
+    animation-timing-function: ease;
+    animation-direction: normal;
+    animation-delay: 0s;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+/* TOGGLE END */
+
+/* LINKS START */
+.smmex-widget .smmex-widget-links-wrapper{
+	
+}
+.smmex-widget.view-absolute .smmex-widget-links-wrapper{
+	opacity: 0;
+	visibility: hidden;
+}
+.smmex-widget.expanded .smmex-widget-links-wrapper{
+	opacity: 1;
+	visibility: visible;
+	transition: all .35s ease;
+	-moz-transition: all .35s ease;
+	-webkit-transition: all .35s ease;
+}
+.smmex-widget .smmex-widget-links-wrapper .widget-link{
+	display: inline-block;
+	position: relative;
+}
+.smmex-widget .smmex-widget-toggle-wrapper button.smmex-widget-toggle:before,
+.smmex-widget .smmex-widget-links-wrapper .widget-link:before {
+    content: '';
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    top: 3px;
+    border-radius: 50%;
+    left: 3px;
+    box-shadow: 0 2px 10px #222222;
+    z-index: -1;
+}
+.smmex-widget .smmex-widget-links-wrapper .widget-link:hover:before,
+.smmex-widget .smmex-widget-toggle-wrapper button.smmex-widget-toggle:hover:before {
+    box-shadow: 0 2px 15px #000000;
+}
+.smmex-widget .smmex-widget-links-wrapper .widget-link span{
+	visibility: hidden;
+    width: 120px;
+    background-color: white;
+    color: #3c3a3a;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    font-family: sans-serif;
+    line-height: 18px;
+    position: absolute;
+    z-index: 1;
+
+	transform: translateY(-50%);
+    right: 120%;
+    top: 50%;
+}
+.smmex-widget .smmex-widget-links-wrapper .widget-link span:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #ddd;
+}
+.smmex-widget .smmex-widget-links-wrapper .widget-link span:before {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #fff;
+    margin-left: -1px;
+    z-index: 1000;
+}
+.smmex-widget .smmex-widget-links-wrapper .widget-link:hover span{
+	visibility: visible;
+}
+/* LINKS END */
+
+
+@-webkit-keyframes rotate-btn {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin: initial;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -webkit-transform-origin: initial;
+    }
+}
+
+@-moz-keyframes rotate-btn {
+    0% {
+        -moz-transform: rotate(0deg);
+        -moz-transform-origin: initial;
+    }
+    100% {
+        -moz-transform: rotate(360deg);
+        -moz-transform-origin: initial;
+    }
+}
+
+@keyframes rotate-btn {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: initial;
+    }
+    100% {
+        transform: rotate(360deg);
+        transform-origin: initial;
+    }
+}
+
+@-webkit-keyframes rotate-reverse-btn {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -webkit-transform-origin: initial;
+    }
+    100% {
+        -webkit-transform: rotate(-360deg);
+        -webkit-transform-origin: initial;
+    }
+}
+
+@-moz-keyframes rotate-reverse-btn {
+    0% {
+        -moz-transform: rotate(0deg);
+        -moz-transform-origin: initial;
+    }
+    100% {
+        -moz-transform: rotate(-360deg);
+        -moz-transform-origin: initial;
+    }
+}
+
+@keyframes rotate-reverse-btn {
+    0% {
+        transform: rotate(0deg);
+        transform-origin: initial;
+    }
+    100% {
+        transform: rotate(-360deg);
+        transform-origin: initial;
+    }
+}
